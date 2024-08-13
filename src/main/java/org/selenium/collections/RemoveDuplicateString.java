@@ -7,16 +7,16 @@ import java.util.List;
 
 public class RemoveDuplicateString {
     public static void main(String[] args) {
+
+        //to find out duplicate string from list
         String str = "I am not tester not tester";
-        HashSet<String> set= new LinkedHashSet<>();
-        List<String> list=new ArrayList<>();
-        String[] words=str.split(" ");
-        for(String word:words){
-            if(set.add(word)){
-                list.add(word);
-            }
-        }
-       String output=String.join(" ",list);
+        HashSet<String> set = new LinkedHashSet<>();
+        String[] strings = str.split(" ");
+        set.addAll(List.of(strings));
+        String output = String.join(" ", set);
         System.out.println(output);
+
+
+
     }
 }
